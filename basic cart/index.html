@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="test">
+<head>
+<meta charset="UTF-8">
+<title>Basic Cart</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+</head>
+
+<body ng-controller="StoreControl as store">
+<div ng-controller="SelectionControl as select">
+<table>
+<tr ng-repeat="product in store.product">
+	<td>{{product.name}}</td>
+	<td>{{product.price | currency}}</td>
+	<td>
+		<select ng-model="select.number" ng-options="option for option in options"></select>
+	</td>
+</tr>
+</table>
+<p>Total :</p>
+</div>
+</body>
+</html>
