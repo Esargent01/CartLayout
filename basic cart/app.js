@@ -44,19 +44,13 @@
 	},
 	];
 
-	var quantities = [
-		1,
-		2,
-		3,
-		4
-	];
 	var app = angular.module('test',[]);
 	app.controller('StoreControl',function(){
 	this.product = gems;
 });
 
 	app.controller('SelectionControl',function(){
-	this.options = quantities;
+	this.count = 0;
 });
 })();
 

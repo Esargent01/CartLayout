@@ -15,7 +15,9 @@
 	<td>{{product.name}}</td>
 	<td>{{product.price | currency}}</td>
 	<td>
-		<select ng-model="select.number" ng-options="option for option in options"></select>
+		<button ng-click="count = count + 1">'+'<button>
+		<p>{{count}}</p>
+		<button ng-click="count = count - 1">'-'<button>
 	</td>
 </tr>
 </table>
