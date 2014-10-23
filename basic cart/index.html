@@ -15,13 +15,13 @@
 	<td>{{product.name}}</td>
 	<td>{{product.price | currency}}</td>
 	<td>
-		<button ng-click="count = count + 1">'+'<button>
-		<p>{{count}}</p>
-		<button ng-click="count = count - 1">'-'<button>
+		<button ng-click="count = count + 1">+<button>
+		<p min="0" ng-model="quantity">{{count}}</p>
+		<button ng-click="count = count - 1">-<button>
 	</td>
 </tr>
 </table>
-<p>Total :</p>
+<p>Total : {{quantity * product.price}}</p>
 </div>
 </body>
 </html>
